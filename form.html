@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+
+</head>
+<body>
+    <form class="form" id="form">
+        <p class="sign">Log In</p>
+        <label>Username</label><br>
+<input type="text" placeholder="username" class="username" id="username" required><br>
+<span id="error" style="color:red;"></span> <br>
+<label>Email</label><br>
+<input type="text"  placeholder="email" class="email" id="email" required><br>
+<span id="error-in" style="color:red;"></span><br>
+<label>Password</label><br>
+<input type="password"   placeholder="password"class="password" id="password" required><br>
+<span id="error-of" style="color:red;"></span>
+<p class="forg"><a class="forgot" href="email.html">forgot password?</a></p>
+
+<br>
+<button id="click">submit</button><br><br>
+
+
+    </form>
+    <script>
+        const username = document.getElementById("username");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        
+        const error = document.getElementById("error");
+        const errorIn = document.getElementById("error-in");
+        const errorOf = document.getElementById("error-of");
+        
+
+        const form = document.getElementById("form");
+       const storedPassword = localStorage.getItem(
+                    password.value);
+
+        form.addEventListener("submit",  function(event){
+            event.preventDefault();
+           let isValid = true;
+            error.textContent="";
+
+
+            if(username.value.trim() === ""){
+                console.log("username required")
+                error.textContent = "username required";
+                isValid = false;
+            }else if(/^\d+$/.test(username.value.trim())){
+                console.log("enter username correctly")
+                error.textContent = "incorrect username";
+            }
+            else if(email.value.trim() === ""){
+                console.log("email required")
+                errorIn.textContent = "email required";
+                isValid = false;
+            }else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value))
+
+            {
+                console.log("invalid email")
+                errorIn.textContent = "invalid email";
+                isValid = false;
+            }else if(password.value.trim() === ""){
+            console.log("invalid password")
+            error.textContent = "password is required";
+            isValid = false;
+
+        }
+            else if(!/^\d+$/.test(password.value.trim()) ){
+                errorOf.textContent = "invalid password";
+                console.log("invalid password")
+
+            }else if(password.value.length < 6){
+                console.log("password not valid")
+                errorOf.textContent = "password must at least 6 characters";
+                isvalid = false;
+                
+            }
+
+            
+
+            
+            else{
+                console.log("success")
+                error.textContent = "";
+                errorIn.textContent = "";
+                errorOf.textContent = "";
+    
+                isValid = true;
+            }
+            if (isValid) {
+                console.log('success')
+                 error.textContent = "";
+                errorIn.textContent = "";
+                errorOf.textContent = "";
+                window.location.href="dashboard.html"
+                localStorage.setItem("userPassword",
+                    password.value);
+                
+                alert("success")
+            }
+            if(!storedPassword){
+                // alert("no account is found")
+                isValid = true;
+                console.log("invalid")
+            }else{
+                alert("success")
+            }
+        });
+    </script>
+
+</body>
+</html>

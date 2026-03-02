@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="code.css">
+</head>
+<body>
+    <form id="form" class="form">
+        <p class="otp">OTP Verification</p>
+        <p class="enter">Enter your OTP Verification code</p><br>
+        <div class="input">
+        <input  id="co" type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" autocomplete="one-time-code"/>
+        <input  id="cod" type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric">
+        <input  id="coe" type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric">
+        <input   id="coo" type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric">
+        <br><br>
+        </div>
+        <br>
+<button class="ver">Verify</button>
+        </form>
+    
+<script>
+
+    const form = document.getElementById("form")
+    const text1 = document.getElementById("co")
+    const text2 = document.getElementById("cod")
+    const text3 = document.getElementById("coe")
+    const text4 = document.getElementById("coo")
+
+
+    form.addEventListener('submit', function(event){
+        let isValid = true;
+        event.preventDefault();
+
+        if(text1.value === "" || text2.value === ""  || text3.value === "" || text4.value === "" ){
+        alert("enter your verification code")
+    isValid = false; 
+    }
+    else{
+        console.log("success")
+        isValid = true;
+    }
+
+    if(isValid){
+        console.log("valid")
+        window.location.href="form2.html"
+    }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="email.css">
+</head>
+<body>
+
+    <form class="form" id="form">
+         <p class="forgot-password">Forgot Password</p>
+        <input id="email" type="email" placeholder="Enter Your Email" required><br>
+        <span id="error" style="color: red;"></span><br>
+        <button class="next">Next</button>
+
+    </form>
+
+    <script>
+        const form = document.getElementById("form")
+        const email = document.getElementById("email")
+         const error = document.getElementById("error")
+
+         form.addEventListener('submit', function(event){
+            let isValid = true;
+event.preventDefault();
+error.textContent = "";
+
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){
+    error.textContent = "invalid email";
+    isValid = false;
+    console.log("invalid")
+}else{
+    isValid = true;
+    error.textContent = "";
+}
+if(isValid){
+    error.textContent = "";
+    window.location.href = "code.html";
+}
+
+         })
+    </script>
+</body>
+</html>

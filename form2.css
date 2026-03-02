@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:none;
+}
+.form{
+
+    background-color: aliceblue;
+    padding: 20px;
+    width: 30rem;
+    height: 20rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+    position: absolute;
+    left:50%;
+    right:50%;
+    top:30%;
+    transform:translate(-50%);
+padding-left: 50px;
+
+}
+input{
+   padding: 10px;
+    width:25rem; 
+    border: none;
+    outline-color: blue;
+    border-radius: 15px;
+}
+.In{
+    text-align: center;
+    font-size: 25px;
+    font-family: arial black;
+    font-weight: bold;
+    color: blue;
+    padding:10px;
+}
+label{
+    font-size: 20px;
+    font-family: arial;
+    
+}
+.sign{
+    width: 26.5rem;
+    padding: 10px;
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: arial black;
+    border: none;
+
+
+}
+.sign-go{
+    text-align: center;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: 300;
+    border: none;
+}
+@media  (max-width:480px){
+    .form,input,.sign{
+display: flex;
+flex-direction: column;
+width: 15rem;
+margin: auto;
+
+    }
+    input{
+        width: 14rem;
+        border-radius: 10px;
+        margin: auto;
+    }
+.sign{
+    width: 15rem;
+    border-radius: 20px;
+    
+}
+.form{
+    height: 50vh;
+}
+    }

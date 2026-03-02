@@ -1,0 +1,80 @@
+*{
+margin:0;
+padding: none;
+}
+
+
+.form{
+   background-color:aliceblue;
+    padding: 20px;
+    width: 30rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+    position: absolute;
+    left:50%;
+    right:50%;
+    top:38%;
+    transform:translate(-50%);
+padding-left: 50px;  
+height:10rem;
+}
+.next{
+    
+width: 26.70rem;
+padding: 10px;
+    background-color:rgb(24, 24, 170);
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: arial black;
+    border: none;
+
+}
+input[type=email]{
+    padding: 15px;
+    width:25rem;
+    border-radius: 15px;
+    border: none;
+    outline-color: rgba(0, 0, 255, 0.756);
+}
+.forgot-password{
+    text-align: center;
+    font-size: 25px;
+    font-family: arial black;
+    font-weight: bold;
+    color:blue;
+}
+@media (max-width:480px){
+    .form,input[type=email],.next{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+ width:16rem;
+ margin: auto;
+
+    }
+    input[type=email]{
+        width: 14rem;
+        border-radius: 10px;
+        /* margin: auto; */
+    }
+.next{
+    /* width: 18.5rem; */
+    border-radius: 20px;
+
+    
+}
+.form{
+    height: 30vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+    width:15rem;
+  
+    
+    line-height: 0.5;
+    
+}
+    }

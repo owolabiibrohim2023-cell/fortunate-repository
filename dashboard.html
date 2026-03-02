@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Inventory Management System</title>
+</head>
+<body>
+    
+     
+    <!-- NAV BAR -->
+
+
+    
+    <nav>
+        <ul>
+                
+    <details>
+        
+          
+         <summary>  Dashboards </summary>
+            
+            <ul class="drop">
+            <li> <a  onclick="showPage('admin')" class="adm"><i class="fas fa-user"></i> Admin </a></li>
+            <li> <a  onclick="showPage('staff')" class="adm"><i class="fas fa-users"></i> Staff </a></li>
+            </ul>
+        
+            </details>
+<details>
+             <summary>Products</summary>
+              <ul class="down">
+                <li><a   onclick="showPage('add')" class="adm" ><i class="fas fa-bag-shopping"></i> Add Product</a></li>
+                <li> <a  class="adm" style="font-size: 18px;"><i class="fas fa-list"></i> product categories</a></li>
+                
+              </ul>
+            </details>
+            
+            <li class="tra"><a  > <i class="fas fa-wallet"></i>Transactions</a></li>
+            <li><a ><i class="fas fa-user"></i>Profile</a></li>
+            <li><a > <i class="fas fa-chart-line"></i> Report</a></li>
+            <li><a href="form.html"> <i class="fas fa-arrow-right-from-bracket"></i>Log out</a></li> 
+           
+                
+        </ul>
+        </nav>
+          
+        
+<!-- ALL CONTENTS -->
+   
+    
+    <div class="content">
+        <!-- ADMIN DASHBOARD -->
+    <div  id="admin" class="page">
+<div class="header">
+    <p class="wel">Admin Dashboard</p>
+    <div class="ser">
+    <div class="dis"><input type="search"    placeholder="search product" class="search" id="search"><button class="sea" id="sea"><i class="fas fa-search"></i></button></div>
+     <p class="note"><i class="fas fa-bell"></i> Notification</p> 
+   </div>
+ <details>
+<summary class="code" id="code"onclick="change()"> &#9776</summary>
+<nav class="response" id="response">
+
+ <details>
+          
+         <summary>  Dashboards </summary>
+            
+            <ul class="drop">
+            <li> <a  onclick="showPage('admin')" class="adm"><i class="fas fa-user"></i> Admin </a></li>
+            <li> <a  onclick="showPage('staff')" class="adm"><i class="fas fa-users"></i> Staff </a></li>
+            </ul>
+        
+            </details>
+<details>
+             <summary>Products</summary>
+              <ul class="down">
+                <li><a   onclick="showPage('add')" class="adm" ><i class="fas fa-bag-shopping"></i> Add Product</a></li>
+                <li> <a  class="adm" style="font-size: 18px;"><i class="fas fa-list"></i> product categories</a></li>
+                
+              </ul>
+            </details>
+            
+            <li class="tra"><a > <i class="fas fa-wallet"></i>Transactions</a></li><br>
+            <li><a  ><i class="fas fa-user"></i>Profile</a></li><br>
+            <li><a     > <i class="fas fa-chart-line"></i> Report</a></li><br>
+            <li><a href="form.html"> <i class="fas fa-arrow-right-from-bracket"></i>Log out</a></li> 
+           
+                
+        </ul>
+    </nav>
+    
+</details>
+
+
+
+</div><br><br>
+<div class="whole">
+<div class="summary">
+     <div class="sum">
+        <p>Total Cost</p> <br>
+        <p id="total-cost"></p> 
+          
+     </div>
+
+      <div class="sum">
+        <p>Total Product</p> <br>
+        <p >12</p> 
+       
+        
+          
+     </div>
+
+      <div class="sum">
+        <p>stock In</p> <br>
+        <p>2000</p> 
+          
+     </div>
+
+      <div class="sum">
+        <p>Stock Out</p> <br>
+        <p  id="total-product">0</p> 
+          
+     </div>
+    </div>
+<!-- MODAL TO EDIT PRODUCTS -->
+
+    <form class="edit-all" id="edit-all">
+        <button class="rem" onclick="removeModal()">X</button>
+        <p class="text">Edit product</p><br>
+
+        <label>Purchase price</label>
+        <input  id="purchase" class="purchase" type="text" required><br><br>
+ <label>selling price</label>
+        <input   id="sell"class="sell" type="text" required><br><br>
+         <label>Discount</label>
+        <input    id="discount"class="discount" type="text" required><br><br>
+      
+        
+        <button class="change" onclick="changeNumber()">Edit</button>
+    </form>
+
+    <!-- EDIT PRODUCT PAGE -->
+    <div class="edit-product">
+  
+ <p class="edit">Edit Products</p>
+
+<table>
+
+    
+    <tr >
+     <th>Product</th>
+     <th>Name</th>
+     <th>Purchase price</th>
+     <th>Selling Price</th>
+     <th>Discount</th>  
+     <th>Edit</th> 
+    </tr>
+    <tr>
+        <td><img  class="table-image"src="gaming chair.jpg" width="100" height="100"></td>
+        <td>Gaming Chair</td>
+        <td>$23000</td>
+        <td>$25000</td>
+        <td>$2000</td>
+       <td><button onclick="displayModal()">Edit</button></td>
+    </tr>
+    
+    
+    
+    <tr>
+        <td><img  class="table-image" src="product-1.png" width="100" height="100"></td>
+        <td>Nordic chair</td>
+        <td>$9000</td>
+        <td>$10500</td>
+        <td>$1500</td>
+         <td><button onclick="displayModal()">Edit</button></td>
+    </tr>
+   
+     
+    
+        
+    <tr>
+        <td><img  class="table-image" src="post-1.jpg" width="100" height="100"></td>
+        <td>Wooden stool</td>
+        <td>$3500</td>
+        <td>$4000</td>
+        <td>$500</td>
+         <td><button onclick="displayModal()">Edit</button></td>
+    </tr>
+
+ 
+
+    <tr  >
+        <td><img  class="table-image" src="product-2.png" width="100" height="100"></td>
+        <td>Kruzo chair</td>
+        <td>$13000</td>
+        <td>$15000</td>
+        <td>$2000</td>
+         <td><button onclick="displayModal()">Edit</button></td>
+    </tr>
+   
+    
+    <tr>
+        <td><img  class="table-image" src="white sofa.jpg" width="100" height="100"></td>
+        <td>white sofa</td>
+        <td>$38000</td>
+        <td>$40000</td>
+        <td>$2000</td>
+       <td><button onclick="displayModal()">Edit</button></td>
+    </tr>
+    
+     
+    
+    <tr>
+        <td><img  class="table-image" src="two sitters.jpg" width="100" height="100"></td>
+        <td>Two sitters</td>
+        <td>$38000</td>
+        <td>$40000</td>
+        <td>$2000</td>
+        <td><button onclick="displayModal()">Edit</button></td>
+    </tr>
+  
+</table>
+</div>
+
+    
+
+   <div id="all-staff">
+     <p class="text-staff">Add Staff</p>
+<form class="add-staff">
+
+
+    
+    
+<div class="up">
+    <div>
+    <label class="class-label">First Name</label>
+    <br>
+    
+    <input class="input-staff" type="text" placeholder="first name" required>
+    </div>
+    <div>
+    <label  class="class-label">middle Name</label><br>
+     <input class="input-staff" type="text" placeholder="middle name" required>
+     </div>
+     <div>
+     <label  class="class-label">last Name</label><br>
+      <input class="input-staff" type="text" placeholder="last name" required>
+      </div>
+      </div><br>
+      
+      <div class="next">
+        <div>
+      <label  class="class-label"> Address</label><br>
+       <input class="input-staff" type="text" placeholder="Address" required>
+       </div>
+       <div>
+       <label  class="class-label">Contact</label><br>
+        <input class="input-staff" type="number" placeholder=" contact" required>
+        </div>
+        <div>
+         <label  class="class-label">Email</label><br>
+        <input class="input-staff" type="email" placeholder=" email" required>
+        </div>
+    </div><br>
+    <div class="foot">
+        <div>
+         <label  class="class-label">State Of Origin</label><br>
+        <input class="input-staff" type="text" placeholder="state of origin" required>
+        </div>
+        <div>
+        <label  class="class-label">Date Of Birth</label><br>
+        <input class="input-staff" type="text" placeholder="Date Of Birth" required>
+        </div>
+        <div>
+        <label  class="class-label">Local Government Area</label><br>
+        <input class="input-staff" type="text" placeholder="local government" required>
+        </div>
+    </div><br>
+    <button class="submit">Submit</button>
+        
+
+
+</form>    
+    
+</div>
+
+
+
+
+<p class="cat">Cart Lists</p>
+
+<div class="list">
+ <p>product</p>
+ <p>name</p>
+ <p>Cost</p>
+ <p>quantity</p>
+ <p>reduce</p>
+ <p>increase</p>
+ <p>remove</p>
+ <p>subtotal</p>
+
+
+
+</div>
+
+<div id="cart_list" class="cart"></div>
+
+
+
+</div>
+</div>
+</div>
+
+<!-- ADD PRODUCTS -->
+
+<div class="page" id="add">
+
+<div class="header-product">
+    <p class="wel">Add Products</p>
+    <div class="ser">
+    <div class="dis"><input type="search"    placeholder="search product" class="search" id="search"><button class="sea" id="sea"><i class="fas fa-search"></i></button></div>
+     <p class="note"><i class="fas fa-bell"></i> Notification</p> 
+</div>
+
+<details>
+<summary class="code" id="codes" onclick="changes()"> &#9776</summary>
+<nav class="response" id="responses">
+
+ <details>
+          
+         <summary>  Dashboards </summary>
+            
+            <ul class="drop">
+            <li> <a  onclick="showPage('admin')" class="adm"><i class="fas fa-user"></i> Admin </a></li>
+            <li> <a  onclick="showPage('staff')" class="adm"><i class="fas fa-users"></i> Staff </a></li>
+            </ul>
+        
+            </details>
+<details>
+             <summary>Products</summary>
+              <ul class="down">
+                <li><a   onclick="showPage('add')" class="adm" ><i class="fas fa-bag-shopping"></i> Add Product</a></li>
+                <li> <a  class="adm" style="font-size: 18px;"><i class="fas fa-list"></i> product categories</a></li>
+                
+              </ul>
+            </details>
+            
+            <li class="tra"><a  > <i class="fas fa-wallet"></i>Transactions</a></li><br>
+            <li><a ><i class="fas fa-user"></i>Profile</a></li><br>
+            <li><a > <i class="fas fa-chart-line"></i> Report</a></li><br>
+            <li><a href="form.html"> <i class="fas fa-arrow-right-from-bracket"></i>Log out</a></li> 
+           
+                
+        </ul>
+    </nav>
+    
+</details> 
+</div>
+
+
+
+
+
+<div id="product-List" class="space"></div>
+</div>
+
+
+
+<!-- STAFF DASHBOARD -->
+
+
+
+<div class="page" id="staff">
+    <div class="header-staff">
+    <p class="wel">Staff Dashboard</p>
+    <div class="ser">
+    <div class="dis"><input type="search"    placeholder="search product" class="search" id="search"><button class="sea" id="sea"><i class="fas fa-search"></i></button></div>
+    <p class="note"><i class="fas fa-bell"></i> Notification</p> 
+</div>
+<details>
+<summary class="code" id="coded" onclick="changed()"> &#9776</summary>
+<nav class="response" id="responsed">
+
+ <details>
+          
+         <summary>  Dashboards </summary>
+            
+            <ul class="drop">
+            <li> <a  onclick="showPage('admin')" class="adm"><i class="fas fa-user"></i> Admin </a></li>
+            <li> <a  onclick="showPage('staff')" class="adm"><i class="fas fa-users"></i> Staff </a></li>
+            </ul>
+        
+            </details>
+<details>
+             <summary>Products</summary>
+              <ul class="down">
+                <li><a   onclick="showPage('add')" class="adm" ><i class="fas fa-bag-shopping"></i> Add Product</a></li>
+                <li> <a  class="adm" style="font-size: 18px;"><i class="fas fa-list"></i> product categories</a></li>
+                
+              </ul>
+            </details>
+            
+            <li class="tra"><a  > <i class="fas fa-wallet"></i>Transactions</a></li><br>
+            <li><a ><i class="fas fa-user"></i>Profile</a></li><br>
+            <li><a > <i class="fas fa-chart-line"></i> Report</a></li><br>
+            <li><a href="form.html"> <i class="fas fa-arrow-right-from-bracket"></i>Log out</a></li> 
+           
+                
+        </ul>
+    </nav>
+    
+</details> 
+</div>
+<div class="staffs">
+   
+    
+<div class="staff-profile">
+ <img class="pro-picture"src="staff.jpg" width="230px" height="230px">
+
+ <p class="pro-name">Name: Chochoye Onaoro</p>
+ <p class="pro-name">State of Origin: Enugu State</p>
+ <p class="pro-name">Contact: 08023456789</p>
+ <p class="pro-name">Address: Ituku enugu state</p>
+ <p class="pro-name">Email:ChochoyeOnaoro@gmail.com</p>
+<p class="pro-name">Date of Birth: 2 of Dec. 1980</p>
+ <p class="pro-name">Local government area: Awgu local government</p>
+
+</div>
+<div class="staff-profiles">
+ <img class="pro-picture"src="staff2.jpg" width="230px" height="230px">
+
+ <p class="pro-name">Name: Chinchigoa Onaoro shikafo</p>
+ <p class="pro-name">State of Origin: Enugu State</p>
+ <p class="pro-name">Contact: 080234563567</p>
+ <p class="pro-name">Address: Ogugu enugu state</p>
+ <p class="pro-name">Email:ChinchigoaOnaoro@gmail.com</p>
+<p class="pro-name">Date of Birth: 7 of Dec. 1988</p>
+ <p class="pro-name">Local government area: Awgu local government</p>
+
+</div>
+
+</div>
+ <div class="edit-product">
+  
+ <p class="edit-staff">Available Products</p>
+
+<table class="resp">
+
+    
+    <tr >
+     <th>Product</th>
+     <th>Name</th>
+     <th>Purchase price</th>
+     <th>Selling Price</th>
+     <th>Discount</th>  
+    
+    </tr>
+    <tr>
+        <td><img  class="table-image"src="gaming chair.jpg" width="100" height="100"></td>
+        <td>Gaming Chair</td>
+        <td>$23000</td>
+        <td>$25000</td>
+        <td>$2000</td>
+       
+    </tr>
+    
+    
+    
+    <tr>
+        <td><img  class="table-image" src="product-1.png" width="100" height="100"></td>
+        <td>Nordic chair</td>
+        <td>$9000</td>
+        <td>$10500</td>
+        <td>$1500</td>
+         
+    </tr>
+   
+     
+    
+        
+    <tr>
+        <td><img  class="table-image" src="post-1.jpg" width="100" height="100"></td>
+        <td>Wooden stool</td>
+        <td>$3500</td>
+        <td>$4000</td>
+        <td>$500</td>
+         
+    </tr>
+
+ 
+
+    <tr  >
+        <td><img  class="table-image" src="product-2.png" width="100" height="100"></td>
+        <td>Kruzo chair</td>
+        <td>$13000</td>
+        <td>$15000</td>
+        <td>$2000</td>
+         
+    </tr>
+   
+    
+    <tr>
+        <td><img  class="table-image" src="white sofa.jpg" width="100" height="100"></td>
+        <td>white sofa</td>
+        <td>$38000</td>
+        <td>$40000</td>
+        <td>$2000</td>
+       
+    </tr>
+    
+     
+    
+    <tr>
+        <td><img  class="table-image" src="two sitters.jpg" width="100" height="100"></td>
+        <td>Two sitters</td>
+        <td>$38000</td>
+        <td>$40000</td>
+        <td>$2000</td>
+        
+    </tr>
+  
+</table>
+</div>
+</div>
+</div> 
+    
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+    function showPage(pageId){
+        const pages = 
+        document.querySelectorAll(".page");
+
+        pages.forEach(page => {
+         page.style.display="none";
+         
+         
+        });
+    
+
+        document.getElementById(pageId).style.display="block";
+        
+
+
+
+    } 
+     showPage('admin');
+
+    
+
+
+    
+
+
+
+
+
+var products = [
+    {
+        "id":1,
+        "name": "Nordic Chair",
+        "image":"product-1.png", 
+        "price": 10500,
+        "button":"add to cart",
+        "quantity":1
+    },
+    {
+        "id":2,
+        "name": "Kruzo Chair",
+        "image":"product-2.png", 
+        "price": 15000,
+        "button":"add to cart",
+        "quantity":1
+    },
+    {
+        "id":3,
+        "name": "Ergonomic Chair",
+        "image":"product-3.png", 
+        "price": 7000,
+        "button":"add to cart",
+        "quantity":1
+    },
+    {
+        "id":4,
+        "name": "Wooden Chair",
+        "image":"img-grid-3.jpg", 
+        "price": 4500,
+        "button":"add to cart",
+        "quantity":1
+        
+    },
+    {
+        "id":5,
+        "name": "Two Sitters",
+        "image":"two sitters.jpg", 
+        "price": 30000,
+        "button":"add to cart",
+        "quantity":1
+    },
+    {
+        "id":6,
+        "name": "Wooden Stood",
+        "image":"post.jpg", 
+        "price": 4000,
+        "button":"add to cart",
+        "quantity":1
+    },
+    {
+        "id":7,
+        "name": "White Sofa",
+        "image":"white sofa.jpg", 
+        "price": 40000,
+        "button":"add to cart",
+        "quantity":1
+    },
+    {
+        "id":8,
+        "name": "Sofa",
+        "image":"img-grid-1.jpg", 
+        "price": 30000,
+        "button":"add to cart",
+        "quantity":1
+    },
+    {
+        "id":9,
+        "name": "Two Sitter",
+        "image":"download.jpg", 
+        "price": 40000,
+        "button":"add to cart",
+        "quantity":1
+    },    {
+        "id":10,
+        "name": "Gaming Chair",
+        "image":"gaming chair.jpg", 
+        "price": 25000,
+        "button":"add to cart",
+        "quantity":1
+    },    {
+        "id":11,
+        "name": "Modern Accent",
+        "image":"modern accent.jpg", 
+        "price": 20000,
+        "button":"add to cart",
+        "quantity":1
+    },    {
+        "id":12,
+        "name": "Kruze",
+        "image":"kruze.jpg", 
+        "price": 11000,
+        "button":"add to cart",
+        "quantity":1
+    },
+];
+        var productlist = document.getElementById("product-List")
+        products.forEach(product => {
+            productlist.innerHTML +=`
+                <div class="responsive-design">
+                    <p class="name">${product.name}</p>
+                    <img src="${product.image}" class="images" width="350" height="350" >
+                    <h1 class="price">$${product.price}</h1>
+                    <button class="btn" onclick="addToCart(${product.id})">Add Product</button>
+                </div>
+            `;
+        });
+
+
+
+        let cart = JSON.parse(localStorage.getItem("cart")) ||[];
+        function addToCart(id) {
+            const item = cart.find(p => Number(p.id) === Number(id))
+            if (item) {
+                item.quantity ++;
+            } else {
+                const product = products.find(p => p.id === id)
+                cart.push({...product, quantity: 1})
+            }
+            localStorage.setItem("cart",JSON.stringify(cart));
+            alert('cart has been added')
+                    let cartValue = document.getElementById("cart_list")
+let totalCost =  document.getElementById("total-cost")
+totalCost.innerHTML='';
+            cartValue.innerHTML='';
+            let totalProduct = document.getElementById("total-product")
+             totalProduct='';
+
+            
+            
+
+            CartLoad();
+
+        }
+      function CartLoad(){
+        let products = [];
+        let total = 0;
+        let cart = JSON.parse(localStorage.getItem("cart")) ||[]
+        let cartValue = document.getElementById("cart_list")
+        let totalCost =  document.getElementById("total-cost")
+        
+        
+        if (cartValue === 0) {
+            cartValue.innerHTML = "<p> cart is empty </p>" 
+        } else {
+            cart.forEach(product => {
+
+                total += parseFloat(product.price) * parseInt(product.quantity)
+                
+                
+                
+                
+ 
+                cartValue.innerHTML +=`
+                <div class="container">
+                    <div class="content_1">
+                        <img src="${product.image}" width="200" height="200">
+                        <div class="names">
+                        <h1 class="h1">${product.name}</h1>
+                        <p class="pp">$${product.price}</p>
+                        <p class="ppp">${product.quantity}</p>
+                        </div>
+                    </div>  
+                    <div class="content_2">
+                        <button class="minus" onclick="ReduceQty(${product.id})" class="but-1">-</button>
+                        <button  class="plus"onclick="increaseQty(${product.id})" class="but-2">+</button>
+                        <button class="remove" onclick="Remove_Cart(${product.id})" class="but-3">Remove</button>
+                    
+                   <p class="add-up"> subtotal =$${parseFloat(product.price) * parseInt(product.quantity)}</p>
+
+                    </div>
+                </div>
+                `
+            });
+        }
+        cartValue.innerHTML +=` <h1 class="total"> Total :$${total}</h1>`
+        totalCost.innerHTML +=` <h1 class="total-c">  $${total}</h1>`
+        
+        
+        
+        
+             
+
+    }
+        function ReduceQty(id) {
+            let cart = JSON.parse(localStorage.getItem("cart")) ||[]
+
+            const item = cart.find(p => Number(p.id) === Number(id))
+            if (item) {
+                item.quantity --;
+            }
+            localStorage.setItem("cart",JSON.stringify(cart));
+
+            // alert('cart reduce')
+        let cartValue = document.getElementById("cart_list")
+let totalCost =  document.getElementById("total-cost")
+totalCost.innerHTML='';
+            cartValue.innerHTML='';
+             let totalProduct = document.getElementById("total-product")
+             totalProduct='';
+
+
+            CartLoad();
+        }
+        function increaseQty(id) {
+            let cart = JSON.parse(localStorage.getItem("cart")) ||[]
+
+            const item = cart.find(p => Number(p.id) === Number(id))
+            if (item) {
+                item.quantity ++;
+            }
+            localStorage.setItem("cart",JSON.stringify(cart));
+
+        
+            // alert('cart increase')
+        let cartValue = document.getElementById("cart_list")
+ let totalCost =  document.getElementById("total-cost")
+            cartValue.innerHTML='';
+ totalCost.innerHTML='';
+  let totalProduct = document.getElementById("total-product")
+             totalProduct='';
+
+
+            CartLoad();
+
+        }
+        function Remove_Cart(id) {
+            let cart = JSON.parse(localStorage.getItem("cart")) ||[]
+
+            const item = cart.filter(p => Number(p.id) !== Number(id))
+          
+            localStorage.setItem("cart",JSON.stringify(item));
+
+        
+            // alert('cart removed')
+        let cartValue = document.getElementById("cart_list")
+
+            cartValue.innerHTML='';
+let totalCost =  document.getElementById("total-cost")
+totalCost.innerHTML='';
+ let totalProduct = document.getElementById("total-product")
+             totalProduct='';
+
+            CartLoad();
+
+        }
+
+ 
+    window.onload = function ()
+    {
+       CartLoad();
+    }
+    
+function displayModal(){
+    const edit = document.getElementById("edit-all");
+    edit.style.display="block";
+}
+
+function removeModal(){
+    const edit = document.getElementById("edit-all");
+     edit.style.display="none";
+}
+const code = document.getElementById("code");
+const menu = document.getElementById("response");
+ 
+function change(){
+   
+    
+   const isOpen = menu.classList.toggle('active');
+   code.innerHTML = isOpen ? 'x' : '<i class="fas fa-bars"></i>';
+
+   
+   
+    
+  
+  
+   
+
+   
+  
+}
+const codes = document.getElementById("codes");
+const menus = document.getElementById("responses");
+ 
+function changes(){
+   
+    
+   const isOpen = menus.classList.toggle('active');
+   codes.innerHTML = isOpen ? 'x' : '<i class="fas fa-bars"></i>';
+}
+const coded = document.getElementById("coded");
+const responsed = document.getElementById("responsed")
+
+function changed(){
+    const open = responsed.classList.toggle('active');
+    coded.innerHTML= open ? 'x': '<i class="fas fa-bars"></i>'
+}
+</script>
+
+</html>
