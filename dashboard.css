@@ -757,7 +757,7 @@ margin-right: 22.5rem;
 .summary{
     flex-direction: column;
     gap:20px;
-    width: 13.5rem;
+    width: 15.5rem;
     border-radius: 20px;
     
 
@@ -771,7 +771,7 @@ margin-right: 22.5rem;
     gap: 1.3rem;
     width: 20rem;
     position:fixed;
-    padding-right:3vw;
+    padding-right:5vw;
     
     
    
@@ -792,7 +792,7 @@ margin-right: 22.5rem;
     width: 20rem;
     position:fixed;
     margin-left: 0;
-    padding-rght:3vw;
+    padding-right:5vw;
     
 
 }
@@ -812,7 +812,7 @@ margin-right: 22.5rem;
     margin-top: 17px;
 }
 .sum{
-    width: 9.8rem;
+    width: 10.8rem;
 }
 .side-bar{
     height: 10vh;
@@ -1043,8 +1043,8 @@ width: 17rem;
     height: 75vh;
     font-size: clamp(16px,2vw,15px);
 line-height: 2.0;
-margin:auto;
-    padding-right:3vw;
+
+    padding-right:4.5vw;
 
 
     
@@ -1055,8 +1055,7 @@ margin:auto;
     height:75vh;
     line-height: 2.0;
     justify-content: center;
-    margin:auto;
-    padding-right:3vw;
+    padding-right:4.5vw;
 
 }
 .pro-name{
