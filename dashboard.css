@@ -308,18 +308,18 @@ display: flex;
 }
 .space{
     
-     margin-top: 6.5rem;
+     margin-top: 5.5rem;
      display: grid;
      grid-template-columns: 300px 300px 300px;
      grid-template-rows: 400px 400px 400px;
-     column-gap: 7rem;
-     row-gap: 7rem;
+     column-gap: 5rem;
+     row-gap: 5rem;
      background-color:rgba(152, 199, 246, 0.536); 
-   width: 138vh;
+   width: 135vh;
      padding-left: 5rem;
      border-radius: 20px;
      text-align: center;
-     padding-right: 7vw;
+     padding-right: 5rem;
    
 
 
