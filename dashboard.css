@@ -916,6 +916,7 @@ tr{
     margin-right:100% ;
     margin-left: -38%;
     margin-top: -110%;
+    margin-bottom:10rem;
     transform: translate(-50px, 50%);
     z-index: 1;
     align-items: center;
@@ -1057,7 +1058,7 @@ line-height: 2.0;
     line-height: 2.0;
     font-size: clamp(16px,2vw,15px);
     padding-right:5vw;
-
+margin-left:1rem;
 }
 .pro-name{
         font-size: 17px;
