@@ -315,7 +315,7 @@ display: flex;
      column-gap: 5rem;
      row-gap: 5rem;
      background-color:rgba(152, 199, 246, 0.536); 
-   width: 136.2vh;
+   width: 137vh;
      padding-left: 5rem;
      border-radius: 20px;
      text-align: center;
@@ -691,7 +691,7 @@ margin-right: 22.5rem;
         display: flex;
         flex-direction: column;
         margin-top: 7.2rem;
-        margin:auto;
+        
         
         
      
