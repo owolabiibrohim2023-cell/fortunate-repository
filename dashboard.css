@@ -315,7 +315,7 @@ display: flex;
      column-gap: 5rem;
      row-gap: 5rem;
      background-color:rgba(152, 199, 246, 0.536); 
-   width: 135vh;
+   width: 136.2vh;
      padding-left: 5rem;
      border-radius: 20px;
      text-align: center;
@@ -691,6 +691,7 @@ margin-right: 22.5rem;
         display: flex;
         flex-direction: column;
         margin-top: 7.2rem;
+        margin:auto;
         
         
      
@@ -770,6 +771,7 @@ margin-right: 22.5rem;
     gap: 1.3rem;
     width: 20rem;
     position:fixed;
+    margin:auto;
     
    
 }
@@ -779,6 +781,7 @@ margin-right: 22.5rem;
     width: 20rem;
     position:fixed;
     margin-left: 0;
+    margin:auto;
 
 }
 .header-staff{
@@ -787,11 +790,12 @@ margin-right: 22.5rem;
     width: 20rem;
     position:fixed;
     margin-left: 0;
+    margin:auto;
 
 }
 #add{
     width: 20rem;
-    margin: 0;
+    margin: auto;
 }
 .images{
     width: 13rem;
@@ -936,6 +940,7 @@ text-align: center;
 }
 #all-staff{
 width: 17rem;
+    margin:auto;
 
 }
 .up{
