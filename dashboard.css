@@ -771,7 +771,7 @@ margin-right: 22.5rem;
     gap: 1.3rem;
     width: 20rem;
     position:fixed;
-    padding-right:5vw;
+    padding-right:6vw;
     
     
    
@@ -792,7 +792,7 @@ margin-right: 22.5rem;
     width: 20rem;
     position:fixed;
     margin-left: 0;
-    padding-right:5vw;
+    padding-right:6vw;
     
 
 }
@@ -848,7 +848,7 @@ th{
 table{
 border-collapse: collapse;
 
-width:17.5rem;
+width:18.5rem;
 overflow: scroll;
 scrollbar-width: thick;
 scrollbar-arrow-color: blue;
@@ -929,7 +929,7 @@ text-align: center;
 .add-staff{
     display: flex;
     flex-direction: column;
-    width: 17.3rem;
+    width: 18.3rem;
     height: 130vh;
   
     
@@ -999,7 +999,7 @@ width: 17rem;
 }
 .space{
     margin-top: 20rem;
-    width: 13.2rem;
+    width: 11.2rem;
     gap: 2rem;
 }
 .names{
@@ -1044,7 +1044,7 @@ width: 17rem;
     font-size: clamp(16px,2vw,15px);
 line-height: 2.0;
 
-    padding-right:4.5vw;
+    padding-right:5vw;
 
 
     
@@ -1055,7 +1055,7 @@ line-height: 2.0;
     height:75vh;
     line-height: 2.0;
     justify-content: center;
-    padding-right:4.5vw;
+    padding-right:5vw;
 
 }
 .pro-name{
