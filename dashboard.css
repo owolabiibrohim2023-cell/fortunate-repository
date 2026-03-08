@@ -771,7 +771,7 @@ margin-right: 22.5rem;
     gap: 1.3rem;
     width: 20rem;
     position:fixed;
-    padding-right:6vw;
+    padding-right:7vw;
     
     
    
@@ -783,6 +783,7 @@ margin-right: 22.5rem;
     position:fixed;
     margin-left: 0;
     padding-left:3vw;
+    padding-right:3vw;
     
 
 }
@@ -792,7 +793,7 @@ margin-right: 22.5rem;
     width: 20rem;
     position:fixed;
     margin-left: 0;
-    padding-right:6vw;
+    padding-right:7vw;
     
 
 }
@@ -848,7 +849,7 @@ th{
 table{
 border-collapse: collapse;
 
-width:18.5rem;
+width:18.8rem;
 overflow: scroll;
 scrollbar-width: thick;
 scrollbar-arrow-color: blue;
@@ -929,7 +930,7 @@ text-align: center;
 .add-staff{
     display: flex;
     flex-direction: column;
-    width: 18.3rem;
+    width: 18.8rem;
     height: 130vh;
   
     
