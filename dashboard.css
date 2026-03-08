@@ -771,7 +771,7 @@ margin-right: 22.5rem;
     gap: 1.3rem;
     width: 20rem;
     position:fixed;
-    margin:auto;
+    
     
    
 }
@@ -781,7 +781,7 @@ margin-right: 22.5rem;
     width: 20rem;
     position:fixed;
     margin-left: 0;
-    margin:auto;
+    
 
 }
 .header-staff{
@@ -790,7 +790,7 @@ margin-right: 22.5rem;
     width: 20rem;
     position:fixed;
     margin-left: 0;
-    margin:auto;
+    
 
 }
 #add{
@@ -940,7 +940,7 @@ text-align: center;
 }
 #all-staff{
 width: 17rem;
-    margin:auto;
+
 
 }
 .up{
