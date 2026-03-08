@@ -919,7 +919,7 @@ tr{
     transform: translate(-50px, 50%);
     z-index: 1;
     align-items: center;
-    width: 13rem;
+    width: 15rem;
     position: fixed;
     
     /* margin-bottom: 100%; */
@@ -1055,7 +1055,7 @@ line-height: 2.0;
     margin-top: 2rem;
     height:75vh;
     line-height: 2.0;
-    justify-content: center;
+    font-size: clamp(16px,2vw,15px);
     padding-right:5vw;
 
 }
