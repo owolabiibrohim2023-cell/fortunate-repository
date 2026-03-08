@@ -771,6 +771,7 @@ margin-right: 22.5rem;
     gap: 1.3rem;
     width: 20rem;
     position:fixed;
+    padding-left:3vw;
     
     
    
@@ -781,6 +782,7 @@ margin-right: 22.5rem;
     width: 20rem;
     position:fixed;
     margin-left: 0;
+    padding-left:3vw;
     
 
 }
@@ -790,16 +792,17 @@ margin-right: 22.5rem;
     width: 20rem;
     position:fixed;
     margin-left: 0;
+    padding-left:3vw;
     
 
 }
 #add{
     width: 20rem;
-    margin: auto;
+    
 }
 .images{
-    width: 13rem;
-    height:13rem;
+    width: 14rem;
+    height:14rem;
 }
 .wel{
     font-size: 25px;
@@ -1040,7 +1043,8 @@ width: 17rem;
     height: 75vh;
     font-size: clamp(16px,2vw,15px);
 line-height: 2.0;
-margin-left: 0;
+margin:auto;
+    padding-right:10px;
 
 
     
@@ -1051,6 +1055,8 @@ margin-left: 0;
     height:75vh;
     line-height: 2.0;
     justify-content: center;
+    margin:auto;
+    padding-right:10px;
 
 }
 .pro-name{
